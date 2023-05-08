@@ -25,6 +25,9 @@ dependencies:
   '@angular/router':
     specifier: ~16.0.0
     version: 16.0.0(@angular/common@16.0.0)(@angular/core@16.0.0)(@angular/platform-browser@16.0.0)(rxjs@7.8.1)
+  '@ionic/angular':
+    specifier: ^7.0.5
+    version: 7.0.5(@angular/core@16.0.0)(@angular/forms@16.0.0)(@angular/router@16.0.0)(rxjs@7.8.1)(zone.js@0.13.0)
   '@nx/angular':
     specifier: 16.1.1
     version: 16.1.1(@angular-devkit/build-angular@16.0.0)(@angular-devkit/core@16.0.0)(@angular-devkit/schematics@16.0.0)(@schematics/angular@16.0.0)(@swc/core@1.3.56)(@types/node@16.11.7)(convert-source-map@1.9.0)(cypress@12.11.0)(eslint@8.15.0)(nx@16.1.1)(rxjs@7.8.1)(typescript@5.0.2)
@@ -2917,6 +2920,34 @@ packages:
   /@humanwhocodes/object-schema@1.2.1:
     resolution: {integrity: sha512-ZnQMnLV4e7hDlUvw8H+U8ASL02SS2Gn6+9Ac3wGGLIe7+je2AeAOxPY+izIPJDfFDb7eDjev0Us8MO1iFRN8hA==}
 
+  /@ionic/angular@7.0.5(@angular/core@16.0.0)(@angular/forms@16.0.0)(@angular/router@16.0.0)(rxjs@7.8.1)(zone.js@0.13.0):
+    resolution: {integrity: sha512-seTyc70JGPrIOn1LjviFfWT8T5aMdj3J97BdOyWU7TFqyapTwj6Rn7x2OyeV9Rph7wcA9Sz3PD1FBwPEuj5utw==}
+    peerDependencies:
+      '@angular/core': '>=14.0.0'
+      '@angular/forms': '>=14.0.0'
+      '@angular/router': '>=14.0.0'
+      rxjs: '>=7.5.0'
+      zone.js: '>=0.11.0'
+    dependencies:
+      '@angular/core': 16.0.0(rxjs@7.8.1)(zone.js@0.13.0)
+      '@angular/forms': 16.0.0(@angular/common@16.0.0)(@angular/core@16.0.0)(@angular/platform-browser@16.0.0)(rxjs@7.8.1)
+      '@angular/router': 16.0.0(@angular/common@16.0.0)(@angular/core@16.0.0)(@angular/platform-browser@16.0.0)(rxjs@7.8.1)
+      '@ionic/core': 7.0.5
+      ionicons: 7.1.0
+      jsonc-parser: 3.2.0
+      rxjs: 7.8.1
+      tslib: 2.5.0
+      zone.js: 0.13.0
+    dev: false
+
+  /@ionic/core@7.0.5:
+    resolution: {integrity: sha512-dcuE/PEF+GHsPEsLppUASSwWnzVcxFZE7uPMDzTwUPMOFTTaRgWbPxIly/4/VRbV6GSL6MEcuVVxhEdWjSODTg==}
+    dependencies:
+      '@stencil/core': 3.2.2
+      ionicons: 7.1.0
+      tslib: 2.5.0
+    dev: false
+
   /@isaacs/cliui@8.0.2:
     resolution: {integrity: sha512-O8jcjabXaleOG9DQ0+ARXWZBTfnP4WNAqzuiJK7ll44AmxGKv/J2M4TPjxjY3znBCfvBXFzucm1twdyFybFqEA==}
     engines: {node: '>=12'}
@@ -3094,7 +3125,7 @@ packages:
     dependencies:
       '@bcoe/v8-coverage': 0.2.3
       '@jest/console': 27.5.1
-      '@jest/test-result': 27.2.2
+      '@jest/test-result': 27.5.1
       '@jest/transform': 27.5.1
       '@jest/types': 27.5.1
       chalk: 4.1.2
@@ -3108,8 +3139,8 @@ packages:
       istanbul-lib-source-maps: 4.0.1
       istanbul-reports: 3.1.5
       jest-haste-map: 27.5.1
-      jest-resolve: 27.2.2
-      jest-util: 27.2.0
+      jest-resolve: 27.5.1
+      jest-util: 27.5.1
       jest-worker: 27.5.1
       slash: 3.0.0
       source-map: 0.6.1
@@ -4566,6 +4597,18 @@ packages:
     dependencies:
       '@sinonjs/commons': 1.8.6
     dev: true
+
+  /@stencil/core@2.22.3:
+    resolution: {integrity: sha512-kmVA0M/HojwsfkeHsifvHVIYe4l5tin7J5+DLgtl8h6WWfiMClND5K3ifCXXI2ETDNKiEk21p6jql3Fx9o2rng==}
+    engines: {node: '>=12.10.0', npm: '>=6.0.0'}
+    hasBin: true
+    dev: false
+
+  /@stencil/core@3.2.2:
+    resolution: {integrity: sha512-wXb9cVWL0T3cTwYLveekdTFCRGx6+9hpVDEXna+N8K8OPoW6xtFAHRLv+LjOM7k59PkA8MG3IinAfV7Y+xa0Hw==}
+    engines: {node: '>=14.10.0', npm: '>=6.0.0'}
+    hasBin: true
+    dev: false
 
   /@swc-node/core@1.10.3(@swc/core@1.3.56):
     resolution: {integrity: sha512-8rpv1DXzsQjN/C8ZXuaTSmJ4M/lRr6geUlbOQ861DLC+sKWcEEvxRjK9cXQ28GserHuEcFDA3wlF9rD1YD0x+Q==}
@@ -8210,6 +8253,12 @@ packages:
       side-channel: 1.0.4
     dev: true
 
+  /ionicons@7.1.0:
+    resolution: {integrity: sha512-iE4GuEdEHARJpp0sWL7WJZCzNCf5VxpNRhAjW0fLnZPnNL5qZOJUcfup2Z2Ty7Jk8Q5hacrHfGEB1lCwOdXqGg==}
+    dependencies:
+      '@stencil/core': 2.22.3
+    dev: false
+
   /ip@2.0.0:
     resolution: {integrity: sha512-WKa+XuLG1A1R0UWhl2+1XQSi+fZWMsYKffMZTTYsiZaUD8k2yDAj5atimTUD2TZkyCkNEeYE5NhFZmupOGtjYQ==}
     dev: true
@@ -8637,9 +8686,9 @@ packages:
       jest-get-type: 27.5.1
       jest-jasmine2: 27.5.1
       jest-regex-util: 27.5.1
-      jest-resolve: 27.2.2
+      jest-resolve: 27.5.1
       jest-runner: 27.5.1
-      jest-util: 27.2.0
+      jest-util: 27.5.1
       jest-validate: 27.5.1
       micromatch: 4.0.5
       pretty-format: 27.5.1
@@ -8675,9 +8724,9 @@ packages:
       jest-get-type: 27.5.1
       jest-jasmine2: 27.5.1
       jest-regex-util: 27.5.1
-      jest-resolve: 27.2.2
+      jest-resolve: 27.5.1
       jest-runner: 27.5.1
-      jest-util: 27.2.0
+      jest-util: 27.5.1
       jest-validate: 27.5.1
       micromatch: 4.0.5
       pretty-format: 27.5.1
@@ -9093,7 +9142,7 @@ packages:
       graceful-fs: 4.2.11
       jest-haste-map: 27.5.1
       jest-pnp-resolver: 1.2.3(jest-resolve@27.2.2)
-      jest-util: 27.2.0
+      jest-util: 27.5.1
       jest-validate: 27.5.1
       resolve: 1.22.2
       slash: 3.0.0

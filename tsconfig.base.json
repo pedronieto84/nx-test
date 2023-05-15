@@ -15,7 +15,12 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@nx-test/login": ["libs/login/src/index.ts"]
+      "@nx-test/interfaces": ["libs/interfaces/src/index.ts"],
+      "@nx-test/login": ["libs/login/src/index.ts"],
+      "@nx-test/user-interface": ["libs/user-interface/src/index.ts"],
+      "@nx-test/worktocloud/web/interfaces-worktocloud": [
+        "libs/worktocloud/web/interfaces-worktocloud/src/index.ts"
+      ]
     }
   },
   "exclude": ["node_modules", "tmp"]

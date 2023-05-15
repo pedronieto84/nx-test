@@ -1,0 +1,42 @@
+{
+  "name": "worktocloud-web-interfaces-worktocloud",
+  "$schema": "../../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/worktocloud/web/interfaces-worktocloud/src",
+  "projectType": "library",
+  "targets": {
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/libs/worktocloud/web/interfaces-worktocloud",
+        "main": "libs/worktocloud/web/interfaces-worktocloud/src/index.ts",
+        "tsConfig": "libs/worktocloud/web/interfaces-worktocloud/tsconfig.lib.json",
+        "assets": ["libs/worktocloud/web/interfaces-worktocloud/*.md"]
+      }
+    },
+    "lint": {
+      "executor": "@nx/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": [
+          "libs/worktocloud/web/interfaces-worktocloud/**/*.ts"
+        ]
+      }
+    },
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "options": {
+        "jestConfig": "libs/worktocloud/web/interfaces-worktocloud/jest.config.ts",
+        "passWithNoTests": true
+      },
+      "configurations": {
+        "ci": {
+          "ci": true,
+          "codeCoverage": true
+        }
+      }
+    }
+  },
+  "tags": []
+}

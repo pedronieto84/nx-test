@@ -1,0 +1,57 @@
+{
+  "name": "worktocloud-backend-worktocloud-backend",
+  "$schema": "../../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/worktocloud/backend/worktocloud-backend/src",
+  "projectType": "application",
+  "targets": {
+    "build": {
+      "executor": "@nx/webpack:webpack",
+      "outputs": ["{options.outputPath}"],
+      "defaultConfiguration": "production",
+      "options": {
+        "target": "node",
+        "compiler": "tsc",
+        "outputPath": "dist/apps/worktocloud/backend/worktocloud-backend",
+        "main": "apps/worktocloud/backend/worktocloud-backend/src/main.ts",
+        "tsConfig": "apps/worktocloud/backend/worktocloud-backend/tsconfig.app.json",
+        "assets": ["apps/worktocloud/backend/worktocloud-backend/src/assets"],
+        "isolatedConfig": true,
+        "webpackConfig": "apps/worktocloud/backend/worktocloud-backend/webpack.config.js"
+      },
+      "configurations": {
+        "development": {},
+        "production": {}
+      }
+    },
+    "serve": {
+      "executor": "@nx/js:node",
+      "defaultConfiguration": "development",
+      "options": {
+        "buildTarget": "worktocloud-backend-worktocloud-backend:build"
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "worktocloud-backend-worktocloud-backend:build:development"
+        },
+        "production": {
+          "buildTarget": "worktocloud-backend-worktocloud-backend:build:production"
+        }
+      }
+    },
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "options": {
+        "jestConfig": "apps/worktocloud/backend/worktocloud-backend/jest.config.ts",
+        "passWithNoTests": true
+      },
+      "configurations": {
+        "ci": {
+          "ci": true,
+          "codeCoverage": true
+        }
+      }
+    }
+  },
+  "tags": []
+}

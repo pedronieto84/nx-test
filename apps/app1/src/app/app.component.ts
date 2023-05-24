@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { NxWelcomeComponent } from './nx-welcome.component';
 //import { User } from '../../../../libs/user-interface/src/index'
-import { User} from '@nx-test/user-interface'
+import { User } from '@nx-test/user-interface';
 
 @Component({
   standalone: true,
@@ -13,8 +13,8 @@ import { User} from '@nx-test/user-interface'
 })
 export class AppComponent {
   title = 'app1';
-  user:User = {
-    email:'adsfasd',
-    password: 'asdfasd'
-  }
+  user: User = {
+    email: 'adsfasd',
+            password: 'asdfasd',
+  };
 }
